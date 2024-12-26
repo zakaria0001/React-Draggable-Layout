@@ -1,11 +1,15 @@
-const Card =()=>{
+import { useEffect } from "react"
+
+const Card =({showText})=>{
+  console.log(showText)
+  useEffect(()=>{
+
+  },[showText])
     return(
         <div
   class="block rounded-lg bg-white p-6 text-surface shadow-secondary-1 dark:bg-surface-dark dark:text-white">
   <h5 class="mb-2 text-xl font-medium leading-tight">Card title</h5>
-  <p class="mb-4 text-base">
-    Some quick example text to build on the card title and make up the
-    bulk of the card's content.
+  <p class="mb-4 text-base">{showText ? ("Some quick example text to build on the card title and make up the bulk of the cards content"):"*************"}
   </p>
   <button
     type="button"
